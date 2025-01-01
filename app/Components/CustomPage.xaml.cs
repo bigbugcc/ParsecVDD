@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using ParsecVDisplay.Languages;
 
 namespace ParsecVDisplay.Components
 {
@@ -39,7 +40,8 @@ namespace ParsecVDisplay.Components
                     // Check negative values & limit 8K resolution
                     if (width < 0 || width > 7680 || height < 0 || height > 4320 || hz < 0)
                     {
-                        MessageBox.Show(App.GetTranslation("t_msg_custom_invalid_slot", i / 3 + 1),
+                        
+                        MessageBox.Show(Lang.t_msg_custom_access_denied,
                             Program.AppName, MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;
                     }
@@ -65,7 +67,7 @@ namespace ParsecVDisplay.Components
                     var args = $"-custom \"{Display.DumpModes(modes)}\" \"{parentGPU}\"";
                     if (Helper.RunAdminTask(args) == false)
                     {
-                        MessageBox.Show(App.GetTranslation("t_msg_custom_access_denied"),
+                        MessageBox.Show(Lang.t_msg_custom_access_denied,
                             Program.AppName, MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;
                     }

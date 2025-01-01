@@ -4,16 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:ParsecVDisplay"
+    xmlns:lang="clr-namespace:ParsecVDisplay.Languages"
     xmlns:components="clr-namespace:ParsecVDisplay.Components"
     mc:Ignorable="d"
-
     Icon="./Resources/icon.ico"
     WindowStyle="None"
     BorderThickness="0"
     Width="800" Height="450"
     ResizeMode="NoResize"
-    
     WindowStartupLocation="CenterScreen"
     Loaded="Window_Loaded"
     Unloaded="Window_Unloaded"
@@ -24,7 +22,7 @@
             <ImageBrush ImageSource="Resources/background.png"/>
         </Grid.Background>
 
-        <Label x:Name="xNoDisplay" Content="{DynamicResource t_hint_add_display_first}" Foreground="#AAA" FontSize="16"
+        <Label x:Name="xNoDisplay" Content="{lang:Lang t_hint_add_display_first}" Foreground="#AAA" FontSize="16"
             HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,183,0,0" />
 
         <WrapPanel x:Name="xDisplays" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,20,52">
@@ -46,12 +44,12 @@
 
             <components:Button Click="OpenCustom" FontSize="14" Margin="10,0,0,0" Width="100">
                 <components:Button.Children>
-                    <TextBlock Text="{DynamicResource t_custom}" />
+                    <TextBlock Text="{lang:Lang t_custom}" />
                 </components:Button.Children>
             </components:Button>
             <components:Button x:Name="xAdd" Click="AddDisplay" FontSize="14" Margin="25,0,0,0" Width="120">
                 <components:Button.Children>
-                    <TextBlock Text="{DynamicResource t_add_display}" />
+                    <TextBlock Text="{lang:Lang t_add_display}" />
                 </components:Button.Children>
             </components:Button>
         </StackPanel>

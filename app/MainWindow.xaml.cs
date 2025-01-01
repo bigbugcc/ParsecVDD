@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Navigation;
 using Microsoft.Win32;
+using ParsecVDisplay.Languages;
 
 namespace ParsecVDisplay
 {
@@ -12,6 +13,7 @@ namespace ParsecVDisplay
     {
         public static IntPtr Handle { get; private set; }
         public static MainWindow Instance { get; private set; }
+        public static LangManager Lang => LangManager.Instance;
 
         public static bool IsMenuOpen;
 

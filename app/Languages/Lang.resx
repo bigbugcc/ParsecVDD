@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LanguagesResx" xml:space="preserve">
+    <value>LanguagesResx</value>
+  </data>
+  <data name="t_add_display" xml:space="preserve">
+    <value>Add display</value>
+  </data>
+  <data name="t_hint_add_display_first" xml:space="preserve">
+    <value>Add a virtual display first!</value>
+  </data>
+  <data name="t_custom" xml:space="preserve">
+    <value>Custom...</value>
+  </data>
+  <data name="t_apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="t_parent_gpu" xml:space="preserve">
+    <value>Parent GPU</value>
+  </data>
+  <data name="t_language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="t_resolution" xml:space="preserve">
+    <value>Resolution</value>
+  </data>
+  <data name="t_refresh_rate" xml:space="preserve">
+    <value>Refresh rate</value>
+  </data>
+  <data name="t_orientation" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="t_landscape" xml:space="preserve">
+    <value>Landscape</value>
+  </data>
+  <data name="t_portrait" xml:space="preserve">
+    <value>Portrait</value>
+  </data>
+  <data name="t_landscape_flipped" xml:space="preserve">
+    <value>Landscape (flipped)</value>
+  </data>
+  <data name="t_portrait_flipped" xml:space="preserve">
+    <value>Portrait (flipped)</value>
+  </data>
+  <data name="t_take_screenshot" xml:space="preserve">
+    <value>Take screenshot</value>
+  </data>
+  <data name="t_remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="t_remove_last_display" xml:space="preserve">
+    <value>Remove last display</value>
+  </data>
+  <data name="t_options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="t_run_on_startup" xml:space="preserve">
+    <value>Run on startup</value>
+  </data>
+  <data name="t_restore_displays" xml:space="preserve">
+    <value>Restore displays</value>
+  </data>
+  <data name="t_fallback_display" xml:space="preserve">
+    <value>Fallback display</value>
+  </data>
+  <data name="t_keep_screen_on" xml:space="preserve">
+    <value>Keep screen on</value>
+  </data>
+  <data name="t_check_for_update" xml:space="preserve">
+    <value>Check for update</value>
+  </data>
+  <data name="t_exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="t_msg_up_to_date" xml:space="preserve">
+    <value>Your app version is up-to-date.</value>
+  </data>
+  <data name="t_msg_update_available" xml:space="preserve">
+    <value>A new version — v{0} is available.\nTo keep your experience optimal, please update it now."</value>
+  </data>
+  <data name="t_msg_custom_access_denied" xml:space="preserve">
+    <value>Could not apply custom resolutions, access denied!</value>
+  </data>
+  <data name="t_msg_custom_invalid_slot" xml:space="preserve">
+    <value>Found invalid value in slot #{0}.</value>
+  </data>
+  <data name="t_msg_exceeded_display_limit" xml:space="preserve">
+    <value>Could not add more virtual displays, you have exceeded the maximum number ({0}).</value>
+  </data>
+  <data name="t_msg_prompt_leave_all" xml:space="preserve">
+    <value>All added virtual displays will be unplugged.\nDo you still want to exit?.</value>
+  </data>
+  <data name="t_msg_driver_status" xml:space="preserve">
+    <value>Driver status</value>
+  </data>
+  <data name="t_msg_must_restart_pc" xml:space="preserve">
+    <value>You must restart your PC to complete the driver setup.</value>
+  </data>
+  <data name="t_msg_driver_is_disabled" xml:space="preserve">
+    <value>{0} is disabled, please enable it in Device Manager.</value>
+  </data>
+  <data name="t_msg_please_install_driver" xml:space="preserve">
+    <value>Please install the driver first.</value>
+  </data>
+  <data name="t_msg_driver_status_not_ok" xml:space="preserve">
+    <value>The driver is not OK, please check again. Current status: {0}.</value>
+  </data>
+  <data name="t_msg_failed_to_obtain_handle" xml:space="preserve">
+    <value>Failed to obtain the device handle, please check the driver installation again.</value>
+  </data>
+  <data name="t_msg_failed_to_add_display" xml:space="preserve">
+    <value>Failed to add virtual display.</value>
+  </data>
+  <data name="t_msg_failed_to_remove_display" xml:space="preserve">
+    <value>Failed to remove virtual display.</value>
+  </data>
+</root>

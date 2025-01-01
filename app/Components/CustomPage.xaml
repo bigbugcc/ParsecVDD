@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:lang ="clr-namespace:ParsecVDisplay.Languages"
     xmlns:local="clr-namespace:ParsecVDisplay.Components"
     mc:Ignorable="d" 
     
@@ -14,7 +15,7 @@
     d:Background="#222"
 >
     <Grid>
-        <Label Content="{DynamicResource t_custom}" Foreground="White" Margin="5,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label Content="{lang:Lang t_custom}" Foreground="White" Margin="5,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type StackPanel}">
@@ -79,7 +80,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,25">
             <TextBlock FontSize="14" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center">
-                <TextBlock Text="{DynamicResource t_parent_gpu}" />:
+                <TextBlock Text="{lang:Lang t_parent_gpu}" />:
             </TextBlock>
             <ComboBox x:Name="xParentGPU" Width="80" FontSize="14" SelectedIndex="0" BorderBrush="Transparent" Background="Transparent" Margin="10,0,0,0">
                 <ComboBoxItem Content="Auto" />
@@ -97,7 +98,7 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Image Source="../Resources/admin.png" Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        <TextBlock Grid.Column="1" Text="{DynamicResource t_apply}" Margin="6,0,0,0" />
+                        <TextBlock Grid.Column="1" Text="{lang:Lang t_apply}" Margin="6,0,0,0" />
                     </Grid>
                 </local:Button.Children>
             </local:Button>

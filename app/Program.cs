@@ -40,7 +40,7 @@ namespace ParsecVDisplay
 
             if (SingleInstance())
             {
-                App.LoadTranslations();
+                //App.LoadTranslations();
                 Helper.StayAwake(false);
 
                 Application.Run(new Tray());

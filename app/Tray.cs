@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Win32;
+using ParsecVDisplay.Languages;
 
 namespace ParsecVDisplay
 {
@@ -90,8 +91,10 @@ namespace ParsecVDisplay
                 }
             };
 
+
+
             var selectedLanguage = Config.Language;
-            foreach (var lang in App.Languages)
+            foreach (var lang in LangManager.DicLang.Keys)
             {
                 var item = new ToolStripMenuItem(lang, null, SetLanguage);
                 if (selectedLanguage == lang)
@@ -126,16 +129,16 @@ namespace ParsecVDisplay
             switch (status)
             {
                 case Device.Status.RESTART_REQUIRED:
-                    error = App.GetTranslation("t_msg_must_restart_pc");
+                    error = Lang.t_msg_must_restart_pc;
                     break;
                 case Device.Status.DISABLED:
-                    error = App.GetTranslation("t_msg_driver_is_disabled", Vdd.Core.ADAPTER);
+                    error = LangManager.GetStr("t_msg_driver_is_disabled", Vdd.Core.ADAPTER);
                     break;
                 case Device.Status.NOT_INSTALLED:
-                    error = App.GetTranslation("t_msg_please_install_driver");
+                    error = Lang.t_msg_please_install_driver;
                     break;
                 default:
-                    error = App.GetTranslation("t_msg_driver_status_not_ok", status);
+                    error = LangManager.GetStr("t_msg_driver_status_not_ok", status);
                     break;
             }
 
@@ -152,36 +155,36 @@ namespace ParsecVDisplay
                 switch (errStatus.Status)
                 {
                     case Device.Status.RESTART_REQUIRED:
-                        message = App.GetTranslation("t_msg_must_restart_pc");
+                        message = Lang.t_msg_must_restart_pc;
                         break;
                     case Device.Status.DISABLED:
-                        message = App.GetTranslation("t_msg_driver_is_disabled", Vdd.Core.ADAPTER);
+                        message = LangManager.GetStr("t_msg_driver_is_disabled", Vdd.Core.ADAPTER);
                         break;
                     case Device.Status.NOT_INSTALLED:
-                        message = App.GetTranslation("t_msg_please_install_driver");
+                        message = Lang.t_msg_please_install_driver;
                         break;
                     default:
-                        message = App.GetTranslation("t_msg_driver_status_not_ok", errStatus.Status);
+                        message = LangManager.GetStr("t_msg_driver_status_not_ok", errStatus.Status);
                         break;
                 }
             }
             else if (ex is Vdd.ErrorDeviceHandle)
             {
-                message = App.GetTranslation("t_msg_failed_to_obtain_handle");
+                message = Lang.t_msg_failed_to_obtain_handle;
             }
             else if (ex is Vdd.ErrorExceededLimit errLimit)
             {
-                message = App.GetTranslation("t_msg_exceeded_display_limit", errLimit.Limit);
+                message = LangManager.GetStr("t_msg_exceeded_display_limit", errLimit.Limit);
             }
             else if (ex is Vdd.ErrorOperationFailed errOperation)
             {
                 switch (errOperation.Type)
                 {
                     case Vdd.ErrorOperationFailed.Operation.AddDisplay:
-                        message = App.GetTranslation("t_msg_failed_to_add_display");
+                        message = Lang.t_msg_failed_to_add_display;
                         break;
                     case Vdd.ErrorOperationFailed.Operation.RemoveDisplay:
-                        message = App.GetTranslation("t_msg_failed_to_remove_display");
+                        message = Lang.t_msg_failed_to_remove_display;
                         break;
                 }
             }
@@ -231,7 +234,7 @@ namespace ParsecVDisplay
             }
             catch (Vdd.ErrorOperationFailed)
             {
-                MessageBox.Show(Owner, App.GetTranslation("t_msg_failed_to_remove_display"),
+                MessageBox.Show(Owner, Lang.t_msg_failed_to_remove_display,
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -244,7 +247,7 @@ namespace ParsecVDisplay
             }
             catch (Vdd.ErrorOperationFailed)
             {
-                MessageBox.Show(Owner, App.GetTranslation("t_msg_failed_to_remove_display"),
+                MessageBox.Show(Owner, Lang.t_msg_failed_to_remove_display,
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -259,7 +262,7 @@ namespace ParsecVDisplay
             MessageBox.Show(Owner,
                 $"{Vdd.Core.ADAPTER}\n" +
                 $"Version: {version}\n" +
-                $"{App.GetTranslation("t_msg_driver_status")}: {status}",
+                $"{Lang.t_msg_driver_status}: {status}",
                 caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -277,7 +280,7 @@ namespace ParsecVDisplay
 
             if (!string.IsNullOrEmpty(newVersion))
             {
-                var ret = MessageBox.Show(Owner, App.GetTranslation("t_msg_update_available", newVersion),
+                var ret = MessageBox.Show(Owner, LangManager.GetStr("t_msg_update_available", newVersion),
                     Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (ret == DialogResult.Yes)
@@ -287,7 +290,7 @@ namespace ParsecVDisplay
             }
             else if (sender != null)
             {
-                MessageBox.Show(Owner, App.GetTranslation("t_msg_up_to_date"),
+                MessageBox.Show(Owner, Lang.t_msg_up_to_date,
                     Program.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -339,7 +342,7 @@ namespace ParsecVDisplay
 
                     if (!string.IsNullOrEmpty(t) && t.StartsWith("t_"))
                     {
-                        mi.Text = App.GetTranslation(t);
+                        mi.Text = LangManager.GetStr(t);
 
                         if (submenu && mi.HasDropDownItems)
                         {
@@ -364,7 +367,7 @@ namespace ParsecVDisplay
             var displays = Vdd.Core.GetDisplays();
             if (displays.Count > 0)
             {
-                if (MessageBox.Show(Owner, App.GetTranslation("t_msg_prompt_leave_all"),
+                if (MessageBox.Show(Owner, Lang.t_msg_prompt_leave_all,
                     Program.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
                     return;
             }
@@ -419,7 +422,9 @@ namespace ParsecVDisplay
 
                 // Update language
                 var lang = mi.Text;
-                App.SetLanguage(lang);
+                Config.Language = lang;
+                App.SetLanguage(Config.Language);
+                //LangManager.Instance.SetLanguage(lang);
                 UpdateContent();
             }
         }

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LanguagesResx" xml:space="preserve">
+    <value>语言资源文件</value>
+  </data>
+  <data name="t_add_display" xml:space="preserve">
+    <value>添加虚拟显示器</value>
+  </data>
+  <data name="t_apply" xml:space="preserve">
+    <value>应用</value>
+  </data>
+  <data name="t_check_for_update" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="t_custom" xml:space="preserve">
+    <value>自定义...</value>
+  </data>
+  <data name="t_exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="t_fallback_display" xml:space="preserve">
+    <value>无屏时启用虚拟显示器</value>
+  </data>
+  <data name="t_hint_add_display_first" xml:space="preserve">
+    <value>请先添加虚拟显示器！</value>
+  </data>
+  <data name="t_keep_screen_on" xml:space="preserve">
+    <value>保持屏幕开启</value>
+  </data>
+  <data name="t_landscape" xml:space="preserve">
+    <value>水平</value>
+  </data>
+  <data name="t_landscape_flipped" xml:space="preserve">
+    <value>水平 (翻转)</value>
+  </data>
+  <data name="t_language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="t_msg_custom_access_denied" xml:space="preserve">
+    <value>无法应用自定义分辨率，访问被拒绝！</value>
+  </data>
+  <data name="t_msg_custom_invalid_slot" xml:space="preserve">
+    <value>插槽 #{0} 中的值无效。</value>
+  </data>
+  <data name="t_msg_driver_is_disabled" xml:space="preserve">
+    <value>{0} 已禁用，请在设备管理器中启用它。</value>
+  </data>
+  <data name="t_msg_driver_status" xml:space="preserve">
+    <value>驱动状态</value>
+  </data>
+  <data name="t_msg_driver_status_not_ok" xml:space="preserve">
+    <value>驱动程序不正常，请重新检查。当前状态： {0}。</value>
+  </data>
+  <data name="t_msg_exceeded_display_limit" xml:space="preserve">
+    <value>达到最大虚拟显示器限额，无法添加更多的虚拟显示器 ({0})。</value>
+  </data>
+  <data name="t_msg_failed_to_add_display" xml:space="preserve">
+    <value>无法添加虚拟显示器。</value>
+  </data>
+  <data name="t_msg_failed_to_obtain_handle" xml:space="preserve">
+    <value>无法获取设备句柄，请重新检查驱动程序安装。</value>
+  </data>
+  <data name="t_msg_failed_to_remove_display" xml:space="preserve">
+    <value>无法移除虚拟显示器。</value>
+  </data>
+  <data name="t_msg_must_restart_pc" xml:space="preserve">
+    <value>你需要重新启动计算机才能使驱动程序正常工作。</value>
+  </data>
+  <data name="t_msg_please_install_driver" xml:space="preserve">
+    <value>请先安装驱动程序。</value>
+  </data>
+  <data name="t_msg_prompt_leave_all" xml:space="preserve">
+    <value>即将移除全部的虚拟显示器。\n您是否仍然要退出?.</value>
+  </data>
+  <data name="t_msg_update_available" xml:space="preserve">
+    <value>有新的更新可用 — v{0}。\n 为了保持您的最佳体验，请立即更新。"</value>
+  </data>
+  <data name="t_msg_up_to_date" xml:space="preserve">
+    <value>应用程序版本已是最新。</value>
+  </data>
+  <data name="t_options" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="t_options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="t_orientation" xml:space="preserve">
+    <value>屏幕方向</value>
+  </data>
+  <data name="t_parent_gpu" xml:space="preserve">
+    <value>主 GPU</value>
+  </data>
+  <data name="t_portrait" xml:space="preserve">
+    <value>纵向</value>
+  </data>
+  <data name="t_portrait_flipped" xml:space="preserve">
+    <value>纵向 (翻转)</value>
+  </data>
+  <data name="t_refresh_rate" xml:space="preserve">
+    <value>刷新率</value>
+  </data>
+  <data name="t_remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="t_remove_last_display" xml:space="preserve">
+    <value>移除最后一个虚拟显示器</value>
+  </data>
+  <data name="t_resolution" xml:space="preserve">
+    <value>分辨率</value>
+  </data>
+  <data name="t_restore_displays" xml:space="preserve">
+    <value>恢复上次关闭的显示器</value>
+  </data>
+  <data name="t_run_on_startup" xml:space="preserve">
+    <value>开机启动</value>
+  </data>
+  <data name="t_take_screenshot" xml:space="preserve">
+    <value>屏幕截图</value>
+  </data>
+</root>
