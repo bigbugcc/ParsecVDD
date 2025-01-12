@@ -151,7 +151,7 @@ namespace ParsecVDisplay
         {
             var mode = new Native.DEVMODE();
             mode.dmSize = (short)Marshal.SizeOf(typeof(Native.DEVMODE));
-            
+
             if (Native.EnumDisplaySettings(DeviceName, -1, ref mode))
             {
                 if (width.HasValue)

@@ -40,7 +40,7 @@ namespace ParsecVDisplay.Components
                     // Check negative values & limit 8K resolution
                     if (width < 0 || width > 7680 || height < 0 || height > 4320 || hz < 0)
                     {
-                        
+
                         MessageBox.Show(Lang.t_msg_custom_access_denied,
                             Program.AppName, MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;

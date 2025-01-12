@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ParsecVDisplay.Languages;
 
 namespace ParsecVDisplay
 {
@@ -12,6 +13,7 @@ namespace ParsecVDisplay
         public const string AppName = "ParsecVDisplay";
         public const string AppVersion = "1.0.2";
         public const string GitHubRepo = "nomi-san/parsec-vdd";
+        public static LangManager Lang => LangManager.Instance;
 
         [STAThread]
         static int Main(string[] args)
@@ -40,9 +42,8 @@ namespace ParsecVDisplay
 
             if (SingleInstance())
             {
-                //App.LoadTranslations();
+                App.SetLanguage(Config.Language);
                 Helper.StayAwake(false);
-
                 Application.Run(new Tray());
             }
 

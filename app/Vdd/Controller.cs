@@ -43,7 +43,7 @@ namespace ParsecVDisplay.Vdd
                 if (cancellation.IsCancellationRequested)
                     break;
 
-                if (VddHandle.IsValidHandle() && LastStatus == Device.Status.OK)    
+                if (VddHandle.IsValidHandle() && LastStatus == Device.Status.OK)
                     Core.Update(VddHandle);
 
                 Thread.Sleep(100);

@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Resources;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Interop;
-using System.Windows.Markup;
 using System.Windows.Media;
 using ParsecVDisplay.Languages;
-using System.Threading;
 
 namespace ParsecVDisplay
 {
@@ -25,7 +16,6 @@ namespace ParsecVDisplay
 
             var silent = e.Args.Contains("-silent");
             var window = new MainWindow();
-
             if (!silent)
             {
                 window.Show();
@@ -35,15 +25,17 @@ namespace ParsecVDisplay
 
         public static void SetLanguage(string lan)
         {
-            //Get System Language and set it to the app
             //string lang = Convert.ToString(Thread.CurrentThread.CurrentCulture.Name);
             if (Current != null)
             {
+                //MainWindow
                 Current.Dispatcher.Invoke(() =>
                 {
                     LangManager.Instance.SetLanguage(lan);
                 });
             }
+            //Tray Thread
+            LangManager.Instance.SetLanguage(lan);
         }
     }
 }

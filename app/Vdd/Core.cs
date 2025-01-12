@@ -122,15 +122,15 @@ namespace ParsecVDisplay.Vdd
 
         private enum IoCtlCode
         {
-            IOCTL_ADD       = 0x22E004,
-            IOCTL_REMOVE    = 0x22A008,
-            IOCTL_UPDATE    = 0x22A00C,
-            IOCTL_VERSION   = 0x22E010,
+            IOCTL_ADD = 0x22E004,
+            IOCTL_REMOVE = 0x22A008,
+            IOCTL_UPDATE = 0x22A00C,
+            IOCTL_VERSION = 0x22E010,
 
             // new code in driver v0.45
             // relates to IOCTL_UPDATE and per display state
             // but unused in Parsec app
-            IOCTL_UNKNOWN1  = 0x22A014,
+            IOCTL_UNKNOWN1 = 0x22A014,
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace ParsecVDisplay.Vdd
             result = output;
             return success;
         }
-        
+
         private static class Native
         {
             [DllImport("kernel32.dll")]
